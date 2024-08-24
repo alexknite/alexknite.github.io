@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Nite 2</title>
+    <title>Alex Nite</title>
     <style>
         body {
             margin: 0;
@@ -14,33 +14,15 @@
             height: 100vh;
             background-color: #f5f5f5;
         }
-        canvas {
+        iframe {
             width: 100%;
-            height: auto;
+            height: 100%;
+            border: none;
         }
     </style>
 </head>
 <body>
-    <canvas id="pdfCanvas"></canvas>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.5.207/pdf.min.js"></script>
-    <script>
-        const url = '08222024_A_Nite_CV.pdf';
-        const canvas = document.getElementById('pdfCanvas');
-        const context = canvas.getContext('2d');
-
-        pdfjsLib.getDocument(url).promise.then(pdf => {
-            pdf.getPage(1).then(page => {
-                const viewport = page.getViewport({ scale: 1.5 });
-                canvas.height = viewport.height;
-                canvas.width = viewport.width;
-
-                const renderContext = {
-                    canvasContext: context,
-                    viewport: viewport
-                };
-                page.render(renderContext);
-            });
-        });
-    </script>
+    <p>Test1</p>
+    <iframe src="08222024_A_Nite_CV.pdf" type="application/pdf"></iframe>
 </body>
 </html>
