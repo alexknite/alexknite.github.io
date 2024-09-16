@@ -1,51 +1,205 @@
-\documentclass[a4paper,10pt]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[margin=1in]{geometry}
-\usepackage{enumitem}
-\usepackage{hyperref}
+% TODO: Add Citi Training
 
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSimpleSubheading}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
 \begin{document}
 
-\title{Your Name}
-\author{ \\ Email: your.email@example.com \\ Phone: +1234567890}
-\date{}
+\begin{center}
+    \textbf{\Huge \scshape Alexander K. Nite} \\ \vspace{1pt}
+    \small \href{mailto:me@alexnite.com}{\underline{me@alexnite.com}} $|$ 
+    \href{https://linkedin.alexnite.com/}{\underline{linkedin.alexnite.com}} $|$
+    \href{https://github.alexnite.com/}{\underline{github.alexnite.com}}
+\end{center}
 
-\maketitle
+\section{Research Interest}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \item{
+     {I am deeply interested in immunology, with a particular focus on autoimmune disorders. My passion lies in understanding the mechanisms underlying these diseases and exploring innovative approaches to their study. By integrating my programming expertise with immunological research, I aim to contribute to the development of computational models and tools that enhance our understanding of immune system dynamics and support the discovery of novel therapeutic strategies.}
+    }
+ \end{itemize}
 
-\section*{Objective}
-A brief statement about your career goals.
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {California State University, Monterey Bay}{Seaside, CA}
+      {Bachelor of Science in Kinesiology, Minor in Computer Science}{Aug. 2020 -- Present}
+    \resumeSubheading
+      {Ohlone College}{Fremont, CA}
+      {}{Aug. 2018 -- Jan. 2022}
+  \resumeSubHeadingListEnd
+  
+\section{Relevant Coursework}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \item{
+     \textbf{Human Anatomy \& Physiology}{: Mastered identifying and understanding physiological processes of body structures and tissues in humans} \\
+     \textbf{General Chemistry I}{: Practiced safe laboratory techniques and procedures such as titration, spectrophotometry, and dilutions. Proved the ability to comprehend general chemistry concepts such as stoichiometry, thermochemistry, kinetics, chemical bonding and formulas.} \\
+     \textbf{General Biology I}{: Practiced safe molecular biology laboratory techniques and procedures such as enzymatic assay and spectrophotometry, DNA isolation, the polymerase chain reaction, agarose gel electrophoresis, recombinant gene expression, genome sequencing, bioinformatics, protein purification ELISA technique, and microscopy.} \\
+     \textbf{Introduction to Data Structures}{: Excelled in using a variety of data structures in the programming language Java, such as arrays, linked lists, stacks, queues, trees, and graphs.} \\
+     \textbf{Exercise is Medicine On-Campus}{: As a student leader, created and implemented free exercise programs to encourage students and faculty on campus to engage in physical activity. Specifically, administered a peer mentoring program to help students identify their physical activity goals, barriers, and facilitators while guiding them through a simple circuit workout plan.
+}
+    }
+ \end{itemize}
 
-\section*{Education}
-\begin{itemize}
-    \item \textbf{Degree, Major} \hfill \textbf{Year}
-    \\
-    University Name, City, Country
-    \\
-    Relevant coursework or achievements.
-\end{itemize}
+\section{Research Experience}
+    \resumeSubHeadingListStart
+        \resumeSubheading
+            {NHGRI GREAT Scholar Summer Research Program at CSUMB}{June 2024 -- Aug. 2024}
+            {Jönsson Lab at the University of California, Santa Cruz}{Santa Cruz, CA}
+        \resumeItem{\textbf{{AI Meets Immunology: Predicting TCR-pMHC Interactions}}}
+        \resumeItemListStart
+            \resumeItem{Collected and wrangled bulk TCR-antigen paired data from public databases.}
+            \resumeItem{Performed data encoding and augmentation techniques to benchmark model performance against augmented and unaugmented datasets.}
+            \resumeItem{Trained a CNN machine learning model using encoded and augmented TCR-pMHC sequence pairs.}
+            \resumeItem{Practiced using Git to manage project progress and collaborate with others.}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
 
-\section*{Experience}
-\begin{itemize}
-    \item \textbf{Job Title, Company Name} \hfill \textbf{Year -- Year}
-    \\
-    Description of your responsibilities and achievements.
-\end{itemize}
+\section{Volunteer Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Intern}{Aug. 2023 -- Dec. 2023}
+      {Power Over Parkinson's}{Monterey, CA}
+      \resumeItemListStart
+        \resumeItem{Assisted Personal Trainers in facilitating low to moderate intensity circuit exercises and specialized dance classes in weekly 1 hour classes that aim to mitigate symptoms of Parkinson's Disease (approximately 30 participants per day).}
+        \resumeItem{Approximately 30 hours total}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Blood Lab Volunteer}{July 2022 -- November 2022}
+      {Veteran Affairs Medical Center}{Palo Alto, CA}
+      \resumeItemListStart
+        \resumeItem{Maintained organizational skills by sanitizing, restocking, and preparing working areas for sterile blood collection.}
+        \resumeItem{Practiced effective communication in a professional environment by greeting and checking in patients (approximately 25 per day).}
+        \resumeItem{Learned proper venipuncture techniques by observing Phlebotomists performing sterile specimen collection.}
+        \resumeItem{Educated on the importance of confidentiality when handing private personal information when transporting specimens from the blood bank to the laboratory for testing.}
+        % \resumeItem{Approximately X hours total}
+    \resumeItemListEnd
+    \resumeSubheading
+      {Volunteer}{Aug. 2021 -- Dec. 2021}
+      {Meals on Wheels}{Pacific Grove, CA}
+      \resumeItemListStart
+        \resumeItem{Prepared donated foods to be cooked and plated by the staff.}
+        \resumeItem{Practiced fine dining skills by greeting and serving patrons.}
+        \resumeItem{Sanitized and restocked the kitchen and dining hall.}
+        \resumeItem{Approximately 25 hours total}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
 
-\section*{Skills}
-\begin{itemize}
-    \item Skill 1
-    \item Skill 2
-    \item Skill 3
-\end{itemize}
+\section{Honors and Awards}
+  \resumeSubHeadingListStart
+    \resumeSimpleSubheading
+        {2024 CSUMB Summer Symposium Outstanding Research Poster Award}{Aug. 2024}
+    \resumeItem{\textbf{{AI Meets Immunology: Predicting TCR-pMHC Interactions}}}
+    \resumeItemListStart
+        \resumeItem{Maintained an organized and readable poster}
+        \resumeItem{Demonstrated extensive knowledge of immunology, data wrangling, and machine learning models}
+        \resumeItem{Conveyed thorough understanding of project methodologies}
+    \resumeItemListEnd
+    \resumeSubheading
+      {NHGRI GREAT Scholars}{Jan 2024 -- Present}
+      {Genome Research Experiences to Attract Talented Undergraduates Preparation}{}
+      \resumeItemListStart
+        \resumeItem{Program includes mentoring, professional development, workshops, and coursework for a mentored summer research experience related to genomics.}
+      \resumeItemListEnd
+    \resumeSimpleSubheading
+      {College of Health and Sciences and Human Services Dean's List}{Aug. 2021 -- Present}
+      \resumeItemListStart
+        \resumeItem{Maintained over a 3.5 GPA while enrolled in at least 12 units per semester.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
 
-\section*{Projects}
-\begin{itemize}
-    \item \textbf{Project Title} \hfill \textbf{Year}
-    \\
-    Brief description of the project and your role in it.
-\end{itemize}
+  \section{Extracurriculars}
+    \resumeSubHeadingListStart
+        \resumeSubheading
+            {2023 ICPC Pacific Northwest Regional Contest -- Division II}{Feb. 2024}
+            {Ranked 42 out of 71}{}
+        \resumeItemListStart
+            \resumeItem{Competed at a Regional International Collegiate Programming Contest including Washington, Oregon, Northern California, British Colombia, North Idaho, and Hawaii}
+            \resumeItem{Collaborated with two other team members to solve 5 out of 12 varying problems featuring different data structures, algorithms, dynamic programming, and more.}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
 
-\section*{References}
-Available upon request.
-
+\section{Skills and Training}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \item{
+     \textbf{Languages}{: English, Spanish, Tagalog, American Sign Language} \\
+     \textbf{Certifications}{: Certified Phlebotomy Technician I, Basic Life Support for Healthcare Providers} \\
+     \textbf{Skills}{: Google Workspace, Canvas, Microsoft Workspace, Java, Javascript, HTML, CSS, C++, Python}
+    }
+  \end{itemize}
+    
 \end{document}
